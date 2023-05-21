@@ -77,23 +77,23 @@ this.customStyles = {
 				{Parser(this.props.text)}
 				
 				{ (this.props.item.book.isbn10 != null && this.props.item.book.isbn10 != "") &&
-					<p className="mb-0"><b>ISBN-10 : </b>{this.props.item.book.isbn10}</p>
+					<p className="mb-0"><b>ISBN-10: </b>{this.props.item.book.isbn10}</p>
 				}
 				
 				{ (this.props.item.book.isbn13 != null && this.props.item.book.isbn13 != "") &&
-					<p className="mb-0"><b>ISBN-13 : </b>{this.props.item.book.isbn13}</p>
+					<p className="mb-0"><b>ISBN-13: </b>{this.props.item.book.isbn13}</p>
 				}
 				
 				{ (this.props.item.book.numberPage != null && this.props.item.book.numberPage != "") &&
-					<p className="mb-0"><b>Number of pages : </b>{this.props.item.book.numberPage}</p>
+					<p className="mb-0"><b>Number of pages: </b>{this.props.item.book.numberPage}</p>
 				}
 				
 				{ (this.props.item.book.publicationDate != null && this.props.item.book.publicationDate != "") &&
-					<p className="mb-0"><b>Publication date : </b>{this.formatDate(this.props.item.book.publicationDate)}</p>
+					<p className="mb-0"><b>Publication date: </b>{this.formatDate(this.props.item.book.publicationDate)}</p>
 				}
 				
 				{ (this.props.item.book.hasOwnProperty('publisher') && this.props.item.book.publisher.hasOwnProperty('title') && this.props.item.book.publisher.title != null && this.props.item.book.publisher.title != "") &&
-					<p className="mb-0"><b>Publisher : </b>{this.props.item.book.publisher.title}</p>
+					<p className="mb-0"><b>Publisher: </b>{this.props.item.book.publisher.title}</p>
 				}
 				<a href={this.props.url} className="btn btn-sm amazon text-white mt-2"><i className="fab fa-alipay"></i> Buy it on Amazon</a>
 			</div>
