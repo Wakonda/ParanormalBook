@@ -60,11 +60,11 @@ this.customStyles = {
   render () {
     return (
       <div>
-        <button className="btn btn-sm btn-info text-white mb-1" onClick={this.handleOpenModal}><i class="fas fa-plus"></i> Plus d'infos</button>
+        <button className="btn btn-sm btn-info text-white mb-1" onClick={this.handleOpenModal}><i class="fas fa-plus"></i> More info</button>
         <ReactModal
 		   style={this.customStyles}
            isOpen={this.state.showModal}
-           contentLabel="Détails du livre"
+           contentLabel="Book Details"
         >
 		<h4>{this.props.item.title}</h4>
 		{ (this.props.item.book.subtitle != null && this.props.item.book.subtitle != "") &&
@@ -85,28 +85,28 @@ this.customStyles = {
 				}
 				
 				{ (this.props.item.book.numberPage != null && this.props.item.book.numberPage != "") &&
-					<p className="mb-0"><b>Nombre de pages : </b>{this.props.item.book.numberPage}</p>
+					<p className="mb-0"><b>Number of pages : </b>{this.props.item.book.numberPage}</p>
 				}
 				
 				{ (this.props.item.book.publicationDate != null && this.props.item.book.publicationDate != "") &&
-					<p className="mb-0"><b>Publié le : </b>{this.formatDate(this.props.item.book.publicationDate)}</p>
+					<p className="mb-0"><b>Publication date : </b>{this.formatDate(this.props.item.book.publicationDate)}</p>
 				}
 				
 				{ (this.props.item.book.hasOwnProperty('publisher') && this.props.item.book.publisher.hasOwnProperty('title') && this.props.item.book.publisher.title != null && this.props.item.book.publisher.title != "") &&
-					<p className="mb-0"><b>Éditeur : </b>{this.props.item.book.publisher.title}</p>
+					<p className="mb-0"><b>Publisher : </b>{this.props.item.book.publisher.title}</p>
 				}
-				<a href={this.props.url} className="btn btn-sm amazon text-white mt-2"><i className="fab fa-alipay"></i> Achetez-le sur Amazon</a>
+				<a href={this.props.url} className="btn btn-sm amazon text-white mt-2"><i className="fab fa-alipay"></i> Buy it on Amazon</a>
 			</div>
 		</div>
 		<hr></hr>
 		{ (this.props.item.book.book.text != null && this.props.item.book.book.text != "") &&
 			<div className="row">
-				<h5>Résumé</h5>
+				<h5>Abstract</h5>
 				<div className="text-justify">{Parser(this.props.item.book.book.text)}</div>
 			</div>
 		}
 		<div className="row">
-			<h5>Auteurs</h5>
+			<h5>Authors</h5>
 			{this.props.item.book.book.authors.map((author, index) => (
 				<div className="card border-0">
 					<div className="card-horizontal">
@@ -118,11 +118,11 @@ this.customStyles = {
 						<div className="card-body">
 							<h6 className="card-title">{author.title}</h6>
 							{ (author.birthDate != null && author.birthDate != "") &&
-								<p className="card-text mb-0"><b>Naissance : </b>{this.formatDateAuthor(author.birthDate)}</p>
+								<p className="card-text mb-0"><b>Birth date: </b>{this.formatDateAuthor(author.birthDate)}</p>
 							}
 							
 							{ (author.deathDate != null && author.deathDate != "") &&
-								<p className="card-text mb-0"><b>Décès : </b>{this.formatDateAuthor(author.deathDate)}</p>
+								<p className="card-text mb-0"><b>Death date: </b>{this.formatDateAuthor(author.deathDate)}</p>
 							}
 						</div>
 					</div>
@@ -130,7 +130,7 @@ this.customStyles = {
 			))}
 		</div>
 		<hr></hr>
-        <button className="btn btn-danger float-end" onClick={this.handleCloseModal}><i className="fas fa-times"></i> Fermer</button>
+        <button className="btn btn-danger float-end" onClick={this.handleCloseModal}><i className="fas fa-times"></i> Close</button>
         </ReactModal>
       </div>
     );

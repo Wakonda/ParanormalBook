@@ -57,29 +57,29 @@ p.price span {
 	background-color: #990000 !important;
 }
 .goldenrod {
-	color: goldenrod !important;
+	color: #6a1164 !important;
 }
 .bg-goldenrod {
-	background-color: goldenrod !important;
+	background-color: #6a1164 !important;
 }
 .page-item.active .page-link {
-	background-color: goldenrod;
-	border-color: goldenrod;
+	background-color: #6a1164;
+	border-color: #6a1164;
 }
 .page-link.arrow {
 	font-weight: bold;
 	font-family: monospace;
 }
 .page-link {
-	color: goldenrod;
+	color: #6a1164;
 }
 .page-link:hover {
-	color: goldenrod;
+	color: #6a1164;
     background-color: #ffdada;
     border-color: #ffb1b1;
 }
 .load-spinner {
-	color: goldenrod;
+	color: #6a1164;
 }
 .text-justify {
 	text-align: justify;

@@ -69,7 +69,7 @@ class Products extends React.Component {
 		if (typeof this.state.authorSearch !== "undefined" && this.state.authorSearch !== null)
 			textSearch = "&book.book.authors.title=" + this.state.authorSearch;
 
-		const url = process.env.REACT_APP_URL + "api/book_stores?page=" + this.state.currentPage + "&order[id]=desc" + textSearch + "&book.book.language.abbreviation=fr";
+		const url = process.env.REACT_APP_URL + "api/book_stores?page=" + this.state.currentPage + "&order[id]=desc" + textSearch + "&book.book.language.abbreviation=en";
 		
 		this.setState({
 			isLoaded: false
@@ -157,13 +157,13 @@ class Products extends React.Component {
 		if (error) {
 			return <div>Erreur : {error.message}</div>;
 		} else if (!isLoaded) {
-			return <div className="text-center text-white"><div className="fa-3x"><i className="fas fa-spinner fa-pulse load-spinner"></i></div>Chargement…</div>;
+			return <div className="text-center text-white"><div className="fa-3x"><i className="fas fa-spinner fa-pulse load-spinner"></i></div>Loading…</div>;
 		} else if (items.length == 0) {
 			return (
 				<div>
 					{this.getFilters()}
 					<div className="alert alert-info">
-						Aucun résultat n'a été trouvé !
+						No results were founds!
 					</div>
 				</div>
 			)
@@ -199,7 +199,7 @@ class Products extends React.Component {
 												title={item.title}
 												item={item}
 											></ProductDetail>
-											<a href={item.externalAmazonStoreLink} className="btn btn-sm amazon text-white"><i className="fab fa-amazon"></i> Achetez-le sur Amazon</a>
+											<a href={item.externalAmazonStoreLink} className="btn btn-sm amazon text-white"><i className="fab fa-amazon"></i> Buy it on Amazon</a>
 										</div>
 									</div>
 								</div>
