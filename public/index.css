@@ -1,0 +1,92 @@
+a.aliexpress {
+	background-color: #E52F20;
+}
+
+div.header {
+	background-image: url(banner.jpg);
+    height: 330px;
+    background-position: top;
+	font-family: serif;
+}
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+.card-horizontal img {
+	max-height: 200px;
+}
+a.amazon {
+	background-color: #FF9900;
+}
+
+.bg-black {
+	background-color: black !important;
+}
+
+@font-face {
+	font-family: "OldLondon";
+	src: url("old_london/OldLondon.ttf") format("truetype");
+}
+
+.title_banner {
+	background-color: black;
+	opacity: 0.5;
+	padding: 5px;
+}
+
+.subtitle_banner {
+	font-size: 0.5em;
+}
+
+p.price span {
+	border: 1px solid #990000;
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
+.nav-link {
+	color: white;
+}
+.black {
+	color: black;
+}
+.darkred {
+	color: #990000 !important;
+}
+.bg-darkred {
+	background-color: #990000 !important;
+}
+.goldenrod {
+	color: goldenrod !important;
+}
+.bg-goldenrod {
+	background-color: goldenrod !important;
+}
+.page-item.active .page-link {
+	background-color: goldenrod;
+	border-color: goldenrod;
+}
+.page-link.arrow {
+	font-weight: bold;
+	font-family: monospace;
+}
+.page-link {
+	color: goldenrod;
+}
+.page-link:hover {
+	color: goldenrod;
+    background-color: #ffdada;
+    border-color: #ffb1b1;
+}
+.load-spinner {
+	color: goldenrod;
+}
+.text-justify {
+	text-align: justify;
+}
+
+@media (max-width: 576px) {
+	#container_abstract_content {
+		text-align: center;
+	}
+}
