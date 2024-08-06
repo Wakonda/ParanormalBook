@@ -18,7 +18,7 @@ class Navbar extends React.Component {
 								<a className="nav-link text-white" href="//forum-en.activite-paranormale.com/"><i className="fas fa-chevron-right"></i> Forum</a>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link text-white" href="//classifiedads.activite-paranormale.com/"><i className="fas fa-chevron-right"></i> Classified Ads</a>
+								<a className="nav-link text-white" href="//activite-paranormale.net/classifiedads/"><i className="fas fa-chevron-right"></i> Classified Ads</a>
 							</li>
 						</ul>
 						<form className="d-flex">
