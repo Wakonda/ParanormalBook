@@ -81,8 +81,8 @@ class Products extends React.Component {
 			(result) => {
 				this.setState({
 					isLoaded: true,
-					items: result["hydra:member"],
-					pageCount: Math.ceil(result["hydra:totalItems"] / this.totalPostsByPage),
+					items: result["member"],
+					pageCount: Math.ceil(result["totalItems"] / this.totalPostsByPage),
 					currentPage: this.state.currentPage
 				});
 			},
